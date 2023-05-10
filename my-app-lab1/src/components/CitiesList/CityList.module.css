@@ -1,0 +1,32 @@
+.citySelect {
+  position: relative;
+  display: inline-block;
+}
+
+.citySelect select {
+  font-size: 16px;
+  padding: 10px 30px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  appearance: none;
+}
+
+.citySelect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.citySelect select:focus + ::after {
+  border-top: 6px solid #000;
+}
